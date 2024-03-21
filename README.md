@@ -64,6 +64,7 @@ y=scaler.fit_transform(y.values.reshape(-1,1))
 # Pembagian dataset
 from sklearn.model_selection import train_test_split
 X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.1,random_state=0,shuffle=True)
+```
 
 ## Pelatihan Model
 
@@ -90,6 +91,7 @@ model.compile(optimizer="Adam",loss='mean_squared_error')
 
 # Melatih model
 history = model.fit(X_train,y_train,batch_size=10,epochs=100,verbose=1,validation_split=0.2)
+```
 
 ## Evaluasi Model
 
