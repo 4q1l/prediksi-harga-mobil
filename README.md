@@ -96,7 +96,7 @@ df['symboling']=df['symboling'].astype('str')
 ```
 
 **Visualisasi Korelasi Antar Kolom**
-
+![Korelasi Antar Kolom](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/1.png)
 
 **Data Preparation Steps:**
 1. Memilih fitur-fitur yang signifikan.
@@ -161,11 +161,11 @@ r2_score(y_test,y_pred)
 plt.plot(history.history['loss'])
 plt.plot(history.history['val_loss'])
 ```
-
+![Plot Loss Training](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/2.png)
 
 ## Kesimpulan Prediksi
 **Gambar Plot Nilai Aktual vs Nilai Prediksi**
-
+![Plot Nilai Aktual vs Nilai Prediksi](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/3.png)
 
 - Model yang telah dilatih memiliki kinerja yang cukup baik dalam memprediksi harga mobil berdasarkan fitur-fitur yang dipilih.
 - Meskipun demikian, masih ada sekitar beberapa variasi dalam data yang tidak dapat dijelaskan oleh model.
