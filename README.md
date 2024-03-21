@@ -1,6 +1,6 @@
 # Proyek Prediksi Harga Mobil dengan Analisis Data
 
-## Latar Belakang
+## Domain Project
 
 Sebuah perusahaan otomotif Tiongkok, Geely Auto, bermimpi untuk memasuki pasar AS dengan mendirikan unit manufaktur mereka di sana dan memproduksi mobil secara lokal untuk bersaing dengan pesaing-pesaing mereka di AS dan Eropa.
 
@@ -122,7 +122,7 @@ X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.1,random_state=
 
 ## Pelatihan Model
 
-Model dilatih menggunakan jaringan saraf tiruan (neural network) dengan menggunakan variabel-variabel yang dipilih. Kami menggunakan metrik koefisien determinasi (R-squared) untuk mengevaluasi seberapa baik model kami cocok dengan data.
+Model dilatih menggunakan jaringan saraf tiruan (neural network) dengan menggunakan variabel-variabel yang dipilih. Hal ini dipilih karena kami ingin model kami mudah di costum sehingga mudah di otak atik. Kami menggunakan metrik koefisien determinasi (R-squared) untuk mengevaluasi seberapa baik model kami cocok dengan data.
 
 Model Machine Learning:
 
@@ -170,6 +170,20 @@ plt.plot(history.history['val_loss'])
 - Model yang telah dilatih memiliki kinerja yang cukup baik dalam memprediksi harga mobil berdasarkan fitur-fitur yang dipilih.
 - Meskipun demikian, masih ada sekitar beberapa variasi dalam data yang tidak dapat dijelaskan oleh model.
 - Terdapat beberapa faktor lain di luar fitur yang digunakan dalam model yang mungkin juga mempengaruhi harga mobil seperti variabel lain yang tidak dipakai, dan dapat menjadi fokus penelitian lebih lanjut untuk meningkatkan kinerja model.
+
+**Kesimpulan Problem Statement**
+1. Pertanyaan 1: Variabel-variabel apa yang signifikan dalam memprediksi harga sebuah mobil?
+- carlength (Panjang Mobil): Variabel ini memiliki rentang nilai yang bervariasi cukup signifikan dari 141.1 hingga 208.1 dengan standar deviasi sekitar 12.34, menunjukkan variasi yang cukup besar dalam panjang mobil. Hal ini menandakan bahwa panjang mobil dapat menjadi faktor yang signifikan dalam menentukan harga mobil, karena ada variasi yang cukup besar antara mobil-mobil yang lebih pendek dan lebih panjang.
+- carwidth (Lebar Mobil): Variabel ini juga menunjukkan variasi yang cukup besar dari 60.3 hingga 72.3 dengan standar deviasi sekitar 2.15. Ini menunjukkan bahwa lebar mobil juga bisa menjadi faktor yang signifikan dalam menentukan harga mobil, karena ada variasi yang cukup besar antara mobil-mobil yang lebih sempit dan lebih lebar.
+- curbweight (Berat Kosong Mobil): Variabel ini memiliki rentang nilai yang cukup besar dari 1488 hingga 4066 dengan standar deviasi sekitar 520.68, menunjukkan variasi yang signifikan dalam berat kosong mobil. Hal ini menandakan bahwa berat kosong mobil dapat menjadi faktor penting dalam menentukan harga mobil, karena ada variasi yang cukup besar antara mobil-mobil yang lebih ringan dan lebih berat.
+- carheight (Tinggi Mobil): Meskipun tinggi mobil tidak menunjukkan variasi yang terlalu besar seperti variabel lainnya, tetapi masih ada variasi yang signifikan dari 47.8 hingga 59.8 dengan standar deviasi sekitar 2.44. Ini menandakan bahwa tinggi mobil juga dapat mempengaruhi harga mobil dalam skala yang lebih kecil, terutama jika ada variasi yang signifikan antara mobil-mobil dengan tinggi yang lebih rendah dan lebih tinggi.
+- highwaympg (Konsumsi Bahan Bakar di Jalan Raya): Variabel ini memiliki rentang nilai yang cukup besar dari 16 hingga 54 dengan standar deviasi sekitar 6.89, menunjukkan variasi yang cukup besar dalam konsumsi bahan bakar di jalan raya. Hal ini menandakan bahwa konsumsi bahan bakar di jalan raya dapat menjadi faktor penting dalam menentukan harga mobil, karena ada variasi yang cukup besar antara mobil-mobil dengan konsumsi bahan bakar yang lebih efisien dan kurang efisien.
+
+2. Pertanyaan 2: Seberapa baik variabel-variabel tersebut menjelaskan harga sebuah mobil?
+Dari nilai koefisien determinasi (R-squared) sebesar 0.6525 yang diperoleh dari model yang telah dilatih, kita dapat membuat beberapa kesimpulan tentang kinerja model dengan memakai 5 variabel tersebut:
+
+- Interpretasi Koefisien Determinasi (R-squared): Nilai R-squared berkisar antara 0 hingga 1. Semakin mendekati 1, semakin baik model dalam menjelaskan variasi dalam data. Nilai 0.6525 menunjukkan bahwa model kita dapat menjelaskan sekitar 65.25% variasi dalam data harga mobil.
+- Evaluasi Prediksi Model: Dengan menggunakan metrik R-squared, kita dapat melihat seberapa baik model kita cocok dengan data aktual. Nilai R-squared yang tinggi menunjukkan bahwa model kita memiliki kemampuan yang baik dalam memprediksi harga mobil.
 
 ## Cara Menjalankan Proyek
 
