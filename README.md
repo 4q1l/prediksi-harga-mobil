@@ -13,6 +13,8 @@ Berdasarkan berbagai survei pasar, perusahaan konsultan tersebut telah mengumpul
 
 ## Business Understanding
 
+Kita diharuskan memodelkan harga mobil dengan variabel independen yang tersedia. Hal ini akan digunakan oleh manajemen untuk memahami bagaimana sebenarnya harga bervariasi dengan variabel independen. Oleh karena itu, mereka dapat memanipulasi desain mobil, strategi bisnis, dll. untuk memenuhi tingkat harga tertentu. Lebih lanjut, model ini akan menjadi cara yang baik bagi manajemen untuk memahami dinamika harga di pasar baru.
+
 **Problem Statements:**
 1. Variabel apa yang signifikan dalam memprediksi harga sebuah mobil.
 2. Seberapa baik variabel-variabel tersebut menjelaskan harga sebuah mobil.
@@ -25,14 +27,28 @@ Berdasarkan berbagai survei pasar, perusahaan konsultan tersebut telah mengumpul
 1. Melakukan pemodelan dengan menggunakan beberapa algoritma machine learning dan membandingkan kinerja mereka.
 2. Menyesuaikan parameter pada algoritma untuk meningkatkan akurasi prediksi.
 
-## Pemahaman Data
+## Data Understanding
+
+Dataset yang digunakan dapat diakses menggunakan Kaggle [disini](https://www.kaggle.com/datasets/hellbuoy/car-price-prediction)
+Informasi dari dataset dapat dirangkum sebagai berikut: 
+
+Tabel 1. Rangkuman informasi Dataset
+
+| Jenis                  | Keterangan                                                                                                        |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Sumber                 | [Kaggle Dataset: Car Price Prediction Multiple Linear Regression](https://www.kaggle.com/datasets/hellbuoy/car-price-prediction)  |
+| Lisensi                | Unknown                                                                                                           |
+| Kategori               | Sosial                                                                                                            |
+| Jenis & Ukuran berkas  | CSV (26.72KB)
 
 **Deskripsi Data:**
-- Jumlah data: 205
+- Jumlah data: 2050
 - Fitur-fitur utama: carlength, carwidth, curbweight, carheight, highwaympg
 - Target: price
 
-Dari deskripsi dataframe yang diberikan, kita dapat melihat statistik deskriptif untuk setiap variabel. Dari sini, kita dapat memilih variabel yang paling signifikan untuk dimasukkan ke dalam model prediksi harga mobil.
+Dari deskripsi dataframe yang diberikan, kita dapat melihat statistik deskriptif untuk setiap variabel. Dari sini, kita dapat memilih variabel yang paling signifikan untuk dimasukkan ke dalam model prediksi harga mobil. Hal tersebut dapat dilihat di tabel 2
+
+Tabel 2. Variabel yang dipilih dan Alasannya
 
 | Variabel       | Alasan Memilihnya                                                     |
 |----------------|------------------------------------------------------------------------|
@@ -42,7 +58,45 @@ Dari deskripsi dataframe yang diberikan, kita dapat melihat statistik deskriptif
 | carheight      | Meskipun variasinya tidak terlalu besar, tinggi mobil juga dapat mempengaruhi harga mobil dalam skala yang lebih kecil.                     |
 | highwaympg     | Konsumsi bahan bakar di jalan raya adalah faktor yang penting dalam menentukan harga mobil karena efisiensinya.                      |
 
-## Persiapan Data
+## Data Preparation
+
+**Data Pra-Preparation Steps**
+Langkah-langkah pra-pemrosesan data
+1. Mendownload _dataset_ dari kaggle
+2. Membaca _dataset_ yang telah didownload ke _DataFrame menggunakan _pandas_
+3. Menampilkan informasi dari _dataset_
+4. Mengecek dan mengani missing value di _dataset_ (jika ditemukan).
+5. Mengecek _sample text_ yang ada di _DataFrame_
+
+**Download Dataset dari Kaggle**
+Pada proyek ini _dataset_ di download melalui Kaggle [disini](https://www.kaggle.com/datasets/hellbuoy/car-price-prediction), untuk mendownload _dataset_, penulis mengunduh secara manual dan mengupload dataset tersebut kedalam folder content di google colab.
+
+**Membaca dataset ke dalam Dataframe**
+Pada bagian ini akan digunakan fungsi `pandas.read_csv()` untuk membaca berkas csv dan menyimpannya di dalam variabel `df` dan bisa dilihat pada tabel 3
+
+| car_ID | symboling | CarName               | fueltype | aspiration | doornumber | carbody   | drivewheel | enginelocation | wheelbase |
+|--------|-----------|-----------------------|----------|------------|------------|-----------|------------|----------------|-----------|
+| 1      | 3         | alfa-romero giulia    | gas      | std        | two        | convertible | rwd        | front          | 88.6      |
+| 2      | 3         | alfa-romero stelvio   | gas      | std        | two        | convertible | rwd        | front          | 88.6      |
+| 3      | 1         | alfa-romero Quadrifoglio | gas   | std        | two        | hatchback  | rwd        | front          | 94.5      |
+| 4      | 2         | audi 100 ls           | gas      | std        | four       | sedan      | fwd        | front          | 99.8      |
+| 5      | 2         | audi 100ls            | gas      | std        | four       | sedan      | 4wd        | front          | 99.4      |
+
+**Cek Missing Value**
+Pada bagian ini digunakan fungsi `isna().sum()` untuk _DataFrame_. Saat dicek tidak ditemukan adanya _missing value_ pada _DataFrame_
+
+**Memperbaiki Beberapa Value yang Salah Eja**
+```
+df['CarName'] = df['CarName'].replace({'maxda': 'mazda', 'nissan': 'Nissan', 'porcshce': 'porsche', 'toyouta': 'toyota', 'vokswagen': 'volkswagen', 'vw': 'volkswagen'})
+```
+
+**Mengubah Tipe Data**
+```
+df['symboling']=df['symboling'].astype('str')
+```
+
+**Visualisasi Korelasi Antar Kolom**
+
 
 **Data Preparation Steps:**
 1. Memilih fitur-fitur yang signifikan.
@@ -102,7 +156,16 @@ from sklearn.metrics import r2_score
 r2_score(y_test,y_pred)
 ```
 
-## Kesimpulan
+**Visualisasi Plot Loss Training**
+```
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+```
+
+
+## Kesimpulan Prediksi
+**Gambar Plot Nilai Aktual vs Nilai Prediksi**
+
 
 - Model yang telah dilatih memiliki kinerja yang cukup baik dalam memprediksi harga mobil berdasarkan fitur-fitur yang dipilih.
 - Meskipun demikian, masih ada sekitar beberapa variasi dalam data yang tidak dapat dijelaskan oleh model.
