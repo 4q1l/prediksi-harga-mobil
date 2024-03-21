@@ -96,9 +96,11 @@ history = model.fit(X_train,y_train,batch_size=10,epochs=100,verbose=1,validatio
 ## Evaluasi Model
 
 Model dievaluasi menggunakan R-squared untuk memeriksa seberapa baik model tersebut memprediksi harga mobil. Dari nilai R-squared sebesar 0.6525, kami menyimpulkan bahwa model kami mampu menjelaskan sekitar 65.25% variasi dalam data harga mobil.
+```
 y_pred = model.predict(X_test)
 from sklearn.metrics import r2_score
 r2_score(y_test,y_pred)
+```
 
 ## Kesimpulan
 
