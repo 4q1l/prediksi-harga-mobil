@@ -2,30 +2,52 @@
 
 ## Domain Project
 
-Sebuah perusahaan otomotif Tiongkok, Geely Auto, bermimpi untuk memasuki pasar AS dengan mendirikan unit manufaktur mereka di sana dan memproduksi mobil secara lokal untuk bersaing dengan pesaing-pesaing mereka di AS dan Eropa.
+Dalam industri otomotif, perusahaan sering menghadapi tantangan dalam menetapkan harga mobil yang kompetitif dan mengoptimalkan keuntungan mereka. Masalah utama yang dihadapi adalah kesulitan dalam memahami faktor-faktor apa yang sebenarnya memengaruhi harga mobil dan bagaimana variabel-variabel tersebut dapat dimanfaatkan secara efektif untuk merespons perubahan pasar.
 
-Mereka telah mengontrak sebuah perusahaan konsultan otomotif untuk memahami faktor-faktor yang memengaruhi penetapan harga mobil. Secara khusus, mereka ingin memahami faktor-faktor yang memengaruhi penetapan harga mobil di pasar Amerika, karena faktor-faktor tersebut mungkin sangat berbeda dari pasar Tiongkok. Perusahaan tersebut ingin mengetahui:
+Pada proyek ini, masalah yang dihadapi adalah kurangnya pemahaman tentang variabel-variabel yang paling berpengaruh dalam menentukan harga mobil di pasar AS. Oleh karena itu, diperlukan sebuah model machine learning yang dapat memprediksi harga mobil berdasarkan fitur-fitur tertentu, sehingga membantu manajemen dalam mengambil keputusan yang lebih tepat dalam penetapan harga.
 
-1. Variabel apa yang signifikan dalam memprediksi harga sebuah mobil.
-2. Seberapa baik variabel-variabel tersebut menjelaskan harga sebuah mobil.
+**Urgensi Proyek**
+Dengan memahami faktor-faktor yang memengaruhi harga mobil, perusahaan dapat merespons perubahan pasar dengan lebih cepat dan tepat. Hal ini dapat meningkatkan daya saing perusahaan dalam industri otomotif, terutama dalam menghadapi pasar AS yang kompetitif.
 
-Berdasarkan berbagai survei pasar, perusahaan konsultan tersebut telah mengumpulkan kumpulan data besar dari berbagai jenis mobil di pasar Amerika.
+**Kontribusi Machine Learning**
+Dengan menggunakan teknik machine learning, kita dapat mengidentifikasi pola dan hubungan antara variabel-variabel tertentu dengan harga mobil. Hasil prediksi dari model yang dikembangkan dapat menjadi panduan bagi manajemen dalam menetapkan harga yang kompetitif, merencanakan strategi pemasaran, dan mengoptimalkan keuntungan perusahaan.
 
 ## Business Understanding
 
-Kita diharuskan memodelkan harga mobil dengan variabel independen yang tersedia. Hal ini akan digunakan oleh manajemen untuk memahami bagaimana sebenarnya harga bervariasi dengan variabel independen. Oleh karena itu, mereka dapat memanipulasi desain mobil, strategi bisnis, dll. untuk memenuhi tingkat harga tertentu. Lebih lanjut, model ini akan menjadi cara yang baik bagi manajemen untuk memahami dinamika harga di pasar baru.
+Pada proyek ini, pemodelan harga mobil memiliki dampak yang signifikan terhadap kepentingan bisnis dan ekonomi perusahaan otomotif. Dengan pemahaman yang baik tentang faktor-faktor yang memengaruhi harga mobil di pasar AS, perusahaan dapat merencanakan strategi pemasaran, menetapkan harga yang kompetitif, dan mengoptimalkan keuntungan mereka.
 
-**Problem Statements:**
-1. Variabel apa yang signifikan dalam memprediksi harga sebuah mobil.
-2. Seberapa baik variabel-variabel tersebut menjelaskan harga sebuah mobil.
+**Dampak terhadap Kepentingan Bisnis dan Ekonomi**
 
-**Goals:**
-1. Menemukan variabel-variabel yang paling berpengaruh dalam menentukan harga mobil di pasar Amerika Serikat.
-2. Mengembangkan model machine learning yang dapat memprediksi harga mobil dengan akurasi yang tinggi.
+- Meningkatkan Daya Saing: Dengan memahami faktor-faktor yang memengaruhi harga mobil, perusahaan dapat menyesuaikan strategi bisnis mereka untuk menjadi lebih responsif terhadap perubahan pasar. Ini akan membantu mereka mempertahankan atau meningkatkan pangsa pasar dan daya saing mereka.
+- Optimasi Keuntungan: Dengan menggunakan model prediksi harga mobil, perusahaan dapat mengoptimalkan keuntungan mereka dengan menetapkan harga yang tepat sesuai dengan fitur-fitur mobil dan kondisi pasar saat ini.
 
-**Solution Statement:**
-1. Melakukan pemodelan dengan menggunakan beberapa algoritma machine learning dan membandingkan kinerja mereka.
-2. Menyesuaikan parameter pada algoritma untuk meningkatkan akurasi prediksi.
+**Contoh Penggunaan Hasil Prediksi dalam Pengambilan Keputusan Bisnis**
+
+- Penetapan Harga yang Optimal: Manajemen dapat menggunakan hasil prediksi untuk menetapkan harga yang optimal untuk mobil baru atau model yang sudah ada. Misalnya, jika model prediksi menunjukkan bahwa mobil dengan fitur-fitur tertentu memiliki permintaan yang tinggi, perusahaan dapat menetapkan harga yang sedikit lebih tinggi untuk meningkatkan margin keuntungan.
+ Perencanaan Portofolio Produk: Hasil prediksi juga dapat membantu perusahaan dalam merencanakan portofolio produk mereka. Mereka dapat memutuskan untuk fokus pada mobil dengan fitur-fitur tertentu yang diprediksi memiliki permintaan yang tinggi, atau memperkenalkan varian baru berdasarkan tren yang teridentifikasi.
+- Strategi Pemasaran yang Tepat: Dengan pemahaman yang lebih baik tentang preferensi konsumen dan faktor-faktor yang memengaruhi harga, perusahaan dapat mengarahkan strategi pemasaran mereka dengan lebih efektif. Mereka dapat menyesuaikan pesan pemasaran mereka untuk menyoroti fitur-fitur yang dinilai tinggi oleh konsumen potensial.
+
+**Kesesuaian Problem Statement, Goals, dan Solution**
+
+1. Problem Statement
+
+- Variabel-variabel apa yang signifikan dalam memprediksi harga sebuah mobil?
+- Seberapa baik variabel-variabel tersebut menjelaskan harga sebuah mobil?
+
+2. Goals 
+
+- Menemukan variabel-variabel yang paling berpengaruh dalam menentukan harga mobil di pasar Amerika Serikat 
+- Mengembangkan model machine learning yang dapat memprediksi harga mobil dengan variabel-variabel yang akan digunakan untuk mendapatkan akurasi yang tinggi.
+
+3. Solution Statement
+
+- Analisis Fitur: Pertama, akan dilakukan analisis fitur untuk memahami hubungan antara fitur-fitur yang ada dengan harga mobil. Ini akan melibatkan visualisasi data, perhitungan korelasi, dan pemahaman domain tentang industri otomotif.
+
+- Seleksi Fitur: Berdasarkan analisis fitur, fitur-fitur yang memiliki korelasi yang kuat atau memiliki pengaruh yang signifikan terhadap harga mobil akan dipilih. Ini akan membantu dalam mengurangi dimensi fitur dan meningkatkan fokus pada variabel-variabel yang paling penting.
+
+- Pemodelan: Setelah seleksi fitur dilakukan, akan dilakukan pemodelan menggunakan berbagai algoritma machine learning seperti regresi linear, regresi polinomial, dan model ensemble. Pada tahap ini, variabel-variabel yang dipilih akan digunakan sebagai fitur masukan untuk memprediksi harga mobil.
+
+- Evaluasi: Setiap model akan dievaluasi menggunakan metrik evaluasi yang sesuai seperti R-squared, Mean Squared Error, dan lainnya. Hal ini akan membantu dalam menilai seberapa baik model mampu menjelaskan variasi dalam data harga mobil.
 
 ## Data Understanding
 
@@ -40,25 +62,6 @@ Tabel 1. Rangkuman informasi Dataset
 | Lisensi                | Unknown                                                                                                           |
 | Kategori               | Sosial                                                                                                            |
 | Jenis & Ukuran berkas  | CSV (26.72KB)
-
-**Deskripsi Data:**
-- Jumlah data: 2050
-- Fitur-fitur utama: carlength, carwidth, curbweight, carheight, highwaympg
-- Target: price
-
-Dari deskripsi dataframe yang diberikan, kita dapat melihat statistik deskriptif untuk setiap variabel. Dari sini, kita dapat memilih variabel yang paling signifikan untuk dimasukkan ke dalam model prediksi harga mobil. Hal tersebut dapat dilihat di tabel 2
-
-Tabel 2. Variabel yang dipilih dan Alasannya
-
-| Variabel       | Alasan Memilihnya                                                     |
-|----------------|------------------------------------------------------------------------|
-| carlength      | Panjang mobil memiliki variasi yang cukup besar dan dapat mempengaruhi harga mobil.                                         |
-| carwidth       | Lebar mobil juga memiliki variasi yang signifikan dan memainkan peran penting dalam penetapan harga mobil.                                    |
-| curbweight     | Berat kosong mobil dapat menjadi faktor penting dalam menentukan harga mobil karena variasi yang signifikan dalam data.  |
-| carheight      | Meskipun variasinya tidak terlalu besar, tinggi mobil juga dapat mempengaruhi harga mobil dalam skala yang lebih kecil.                     |
-| highwaympg     | Konsumsi bahan bakar di jalan raya adalah faktor yang penting dalam menentukan harga mobil karena efisiensinya.                      |
-
-## Data Preparation
 
 **Data Pra-Preparation Steps**
 Langkah-langkah pra-pemrosesan data
@@ -86,49 +89,45 @@ Pada bagian ini akan digunakan fungsi `pandas.read_csv()` untuk membaca berkas c
 Pada bagian ini digunakan fungsi `isna().sum()` untuk _DataFrame_. Saat dicek tidak ditemukan adanya _missing value_ pada _DataFrame_
 
 **Memperbaiki Beberapa Value yang Salah Eja**
-```
-df['CarName'] = df['CarName'].replace({'maxda': 'mazda', 'nissan': 'Nissan', 'porcshce': 'porsche', 'toyouta': 'toyota', 'vokswagen': 'volkswagen', 'vw': 'volkswagen'})
-```
+Variabel yang salah eja adalah sebagai berikut 
+| Variabel salah eja | Koreksi   |
+|-------------------|-----------|
+| maxda             | mazda     |
+| nissan            | Nissan    |
+| porcshce          | porsche   |
+| toyouta           | toyota    |
+| vokswagen         | volkswagen|
+| vw                | volkswagen|
 
-**Mengubah Tipe Data**
-```
-df['symboling']=df['symboling'].astype('str')
-```
+**Deskripsi Variabel yang akan Dipakai:**
+- Variabel Independent(Variabel yang akan dipakai): carlength,carwidth,curbweight,enginesize, horsepower
+- Variabel Dependant(Variabel Target): price
 
-**Visualisasi Korelasi Antar Kolom**
+Dari deskripsi dataframe yang diberikan, kita dapat melihat statistik deskriptif untuk setiap variabel. Dari sini, kita dapat memilih variabel yang paling signifikan untuk dimasukkan ke dalam model prediksi harga mobil. Alasan dipilihnya variabel-variabel tersebut dapat dilihat pada gambar dibawah
+
 ![Korelasi Antar Kolom](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/1.png)
 
+Pada gambar tersebut bisa dilihat bahwasanya nilai korelasi variabel independent atas variabel dependent yang diatas 0.6 akan dipakai untuk menguji apakah variabel-variabel tersebut adalah variabel yang berpengaruh besar terhadap variabel harga.
+
+## Data Preparation
+
 **Data Preparation Steps:**
-1. Memilih fitur-fitur yang signifikan.
-2. Penskalaan fitur menggunakan StandardScaler.
-3. Pembagian dataset menjadi set pelatihan dan pengujian.
+1. Plot Outlier dari kelima variabel tersebut dengan fungsi `detect_and_handle_outliers`, bisa dilihat pada gambar berikut
 
-```python
-# Memilih fitur-fitur yang signifikan
-numerical_columns_without_price_carID = [col for col in numerical_columns if col not in ['price', 'car_ID']]
-X = df[['carlength','carwidth','curbweight','carheight','highwaympg']]
-y=df['price']
 
-# Penskalaan fitur
-from sklearn.preprocessing import StandardScaler
-scaler = StandardScaler()
-X = scaler.fit_transform(X)
-y=scaler.fit_transform(y.values.reshape(-1,1))
-
-# Pembagian dataset
-from sklearn.model_selection import train_test_split
-X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.1,random_state=0,shuffle=True)
-```
+ 
+2. Penskalaan fitur menggunakan `StandardScaler` dari library sklearn.
+3. Pembagian dataset menjadi set pelatihan dan pengujian dengan fungsi `import_test_train` library sklearn.
 
 ## Pelatihan Model
 
-Model dilatih menggunakan jaringan saraf tiruan (neural network) dengan menggunakan variabel-variabel yang dipilih. Hal ini dipilih karena kami ingin model kami mudah di costum sehingga mudah di otak atik. Kami menggunakan metrik koefisien determinasi (R-squared) untuk mengevaluasi seberapa baik model kami cocok dengan data.
+- Model dilatih menggunakan jaringan saraf tiruan (neural network) dengan menggunakan variabel-variabel yang dipilih. Hal ini dipilih karena neural network mudah dipakai dan bisa dicostum dengan bebas.
+- Di sini menggunakan metrik koefisien determinasi (R-squared) untuk mengevaluasi seberapa baik kecocokan model tersebut dengan data.
 
 Model Machine Learning:
-
 Membangun model neural network dengan TensorFlow.
-Tahapan Pemodelan:
 
+Tahapan Pemodelan:
 - Menentukan arsitektur model.
 - Mengompilasi model dengan optimizer Adam dan loss function Mean Squared Error (MSE).
 - Melatih model dengan data pelatihan.
