@@ -83,7 +83,9 @@ Tabel 2. Dataframe
 Pada bagian ini digunakan fungsi sna().sum() untuk _DataFrame_. Saat dicek tidak ditemukan adanya _missing value_ pada _DataFrame_
 
 **Memperbaiki Beberapa Value yang Salah Eja**
-Variabel yang salah eja adalah sebagai berikut 
+Variabel yang salah eja bisa dilihat pada tabel 3.
+
+Tabel 3. List Value dari Variabel CarName yang Salah Eja
 | Variabel salah eja | Koreksi   |
 |-------------------|-----------|
 | maxda             | mazda     |
@@ -94,6 +96,9 @@ Variabel yang salah eja adalah sebagai berikut
 | vw                | volkswagen|
 
 **Penjelasan Setiap Variabel**
+Untuk penjelasan setiap tabel bisa dilihat pada Tabel 4
+
+Tabel 4. Penjelasan Singkat Tentang Variabel pada Dataset
 | Nama Variabel        | Penjelasan Singkat                                       |
 |----------------------|----------------------------------------------------------|
 | car_ID               | ID unik untuk setiap mobil                               |
@@ -129,9 +134,8 @@ Variabel yang salah eja adalah sebagai berikut
 
 Dari deskripsi dataframe yang diberikan, dapat dilihat statistik deskriptif untuk setiap variabel. Dari sini, dapat dipilih variabel yang paling signifikan untuk dimasukkan ke dalam model prediksi harga mobil. Alasan dipilihnya variabel-variabel tersebut dapat dilihat pada gambar 1
 
-Gambar 1. Matriks Korelasi
-
 ![Korelasi Antar Kolom](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/1.png)
+Gambar 1. Menunjukkan Korelasi Antar Variabel
 
 Pada gambar tersebut bisa dilihat bahwasanya nilai korelasi variabel independent atas variabel dependent yang diatas 0.6 akan dipakai untuk menguji apakah variabel-variabel tersebut adalah variabel yang berpengaruh besar terhadap variabel harga.
 
@@ -140,8 +144,8 @@ Pada gambar tersebut bisa dilihat bahwasanya nilai korelasi variabel independent
 **Data Preparation Steps:**
 1. Plot Outlier dari kelima variabel tersebut dengan fungsi detect_and_handle_outliers, bisa dilihat pada gambar 2.
 
-Gambar 2. Box Plot Outlier dari 5 variabel Independent
 ![Plot Outlier](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/4.png)
+Gambar 2. Box Plot Outlier dari 5 variabel Independent
 
 Disini metode yang digunakan untuk membersihkan outlier adalah IQR. Interquartile Range (IQR) adalah metode yang umum digunakan untuk mendeteksi dan menangani outlier dalam data. Metode ini didasarkan pada perhitungan kuartil data, yaitu kuartil pertama (Q1) dan kuartil ketiga (Q3), yang digunakan untuk menentukan batas bawah dan batas atas di mana data dianggap sebagai outlier.
  
@@ -168,8 +172,8 @@ Disini metode yang digunakan untuk membersihkan outlier adalah IQR. Interquartil
 - Fungsi summary() digunakan untuk menampilkan ringkasan arsitektur model yang telah dibuat.
 - Ini termasuk jumlah parameter yang akan dioptimalkan selama proses pelatihan, serta ukuran output dari setiap layer. Tampilan dari ringkasan arsitektur model bisa dilihat pada gambar 3.
 
-Gambar 3. Ringkasan Arsitektur Model 
 ![Arsitektur Model](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/5.JPG)
+Gambar 3. Ringkasan Arsitektur Model Sequential
 
 4. Kompilasi Model:
 - Model kemudian dikompilasi menggunakan optimizer Adam dan fungsi loss mean squared error (MSE).
@@ -197,8 +201,9 @@ R-squared yang didapat memiliki nilai sebesar 0.8226028764928757. Ini mengindika
 
 - **Rumus R-squared:** R-squared dihitung sebagai koefisien determinasi yang merupakan proporsi variabilitas dalam variabel dependen yang dapat dijelaskan oleh variabel independen dalam model. Rumus matematisnya bisa dilihat pada gambar 4.
 
-Gambar 4. Rumus R-Squared
+
 ![Rumus R-Squared](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/7.png)
+Gambar 4. Rumus R-Squared
 
 R-squared = 1 - (SS_res / SS_tot)
 
@@ -212,8 +217,8 @@ R-squared = 1 menunjukkan bahwa model menjelaskan seluruh variasi dalam data den
 
 - **Plot Loss Selama Pelatihan:** Grafik loss selama proses pelatihan digambarkan untuk memantau konvergensi model. Ini membantu dalam mengevaluasi apakah model telah mengalami overfitting atau underfitting, serta seberapa baik model beradaptasi dengan data pelatihan dan validasi. Plot Loss dan Val_Loss dapat dilihat pada gambar 5.
 
-Gambar 5. Plot Loss dan Val_Loss
 ![Plot Loss Training](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/2.png)
+Gambar 5. Plot Loss dan Val_Loss Dalam 100 Epoch
 
 3. Plot Nilai Aktual dan Nilai yang Diprediksi: Plot nilai aktual (y_test) dan nilai yang diprediksi (y_pred) digambarkan untuk memvisualisasikan seberapa baik model dalam memprediksi harga mobil. Ini memberikan pemahaman visual tentang seberapa dekat prediksi model dengan nilai aktual, serta apakah ada pola atau tren tertentu dalam prediksi yang perlu diperhatikan.
 Plot Loss Selama Pelatihan: Grafik loss selama proses pelatihan digambarkan untuk memantau konvergensi model. Ini membantu dalam mengevaluasi apakah model telah mengalami overfitting atau underfitting, serta seberapa baik model beradaptasi dengan data pelatihan dan validasi.
