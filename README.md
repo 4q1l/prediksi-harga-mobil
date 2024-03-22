@@ -114,53 +114,80 @@ Pada gambar tersebut bisa dilihat bahwasanya nilai korelasi variabel independent
 **Data Preparation Steps:**
 1. Plot Outlier dari kelima variabel tersebut dengan fungsi `detect_and_handle_outliers`, bisa dilihat pada gambar berikut
 
+![Plot Outlier](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/4.png)
 
+Disini metode yang digunakan untuk membersihkan outlier adalah `IQR`. `Interquartile Range (IQR)` adalah metode yang umum digunakan untuk mendeteksi dan menangani outlier dalam data. Metode ini didasarkan pada perhitungan kuartil data, yaitu kuartil pertama (Q1) dan kuartil ketiga (Q3), yang digunakan untuk menentukan batas bawah dan batas atas di mana data dianggap sebagai outlier.
  
-2. Penskalaan fitur menggunakan `StandardScaler` dari library sklearn.
-3. Pembagian dataset menjadi set pelatihan dan pengujian dengan fungsi `import_test_train` library sklearn.
+2. Penskalaan fitur menggunakan `StandardScaler` dari library sklearn. Penggunaan `StandardScaler` dari modul `sklearn.preprocessing` dalam kode tersebut bertujuan untuk melakukan penskalaan fitur. Dengan menggunakan StandardScaler, kita dapat meningkatkan kinerja dan stabilitas model machine learning, serta membuat interpretasi hasil model menjadi lebih mudah dan konsisten.
+  
+3. Pembagian dataset menjadi set pelatihan dan pengujian dengan fungsi `import_test_train` dari model `sklearn.model_selection`.
 
-## Pelatihan Model
+## Modelling
+**Langkah Modelling**
+1. Inisialisasi Model Sequential:
 
-- Model dilatih menggunakan jaringan saraf tiruan (neural network) dengan menggunakan variabel-variabel yang dipilih. Hal ini dipilih karena neural network mudah dipakai dan bisa dicostum dengan bebas.
-- Di sini menggunakan metrik koefisien determinasi (R-squared) untuk mengevaluasi seberapa baik kecocokan model tersebut dengan data.
+- Langkah pertama adalah menginisialisasi model Sequential dari TensorFlow/Keras. Model Sequential adalah tumpukan linear dari layer-layer neural network, yang dijalankan secara berurutan.
+- Alasan penggunaan Sequential model adalah karena ini adalah jenis model yang sederhana dan cocok untuk penggunaan dalam jaringan saraf tiruan feedforward yang memiliki arsitektur yang sekuensial.
 
-Model Machine Learning:
-Membangun model neural network dengan TensorFlow.
+2. Menambahkan Layer-layer Dense:
 
-Tahapan Pemodelan:
-- Menentukan arsitektur model.
-- Mengompilasi model dengan optimizer Adam dan loss function Mean Squared Error (MSE).
-- Melatih model dengan data pelatihan.
+- Layer-layer Dense ditambahkan ke dalam model menggunakan method add().
+- Layer Dense adalah layer yang terkoneksi penuh, di mana setiap neuron di layer tersebut terhubung dengan setiap neuron di layer sebelumnya dan setelahnya.
+- Kemudian ditambahkan dua layer Dense dengan aktivasi ReLU (Rectified Linear Unit). Aktivasi ReLU umumnya digunakan karena kecepatan komputasinya yang cepat dan kemampuannya untuk mengatasi masalah vanish gradient.
+- Layer pertama membutuhkan input_dim yang sesuai dengan jumlah fitur pada data latih.
+- Layer terakhir memiliki satu neuron karena ini adalah model regresi, dengan aktivasi linear karena ini adalah output dari model regresi yang menghasilkan prediksi kontinu.
 
-```python
-# Arsitektur model
-model = Sequential()
-model.add(Dense(10, activation='relu', input_dim=X_train.shape[1]))
-model.add(Dense(10, activation='relu'))
-model.add(Dense(1, activation='linear'))
+3. Menampilkan Ringkasan Arsitektur Model:
+![Arsitektur Model](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/5.JPG)
+- Fungsi summary() digunakan untuk menampilkan ringkasan arsitektur model yang telah dibuat.
+- Ini termasuk jumlah parameter yang akan dioptimalkan selama proses pelatihan, serta ukuran output dari setiap layer.
 
-# Mengompilasi model
-model.compile(optimizer="Adam",loss='mean_squared_error')
+4. Kompilasi Model:
+- Model kemudian dikompilasi menggunakan optimizer Adam dan fungsi loss mean squared error (MSE).
+- Adam merupakan algoritma optimizer yang efisien untuk melatih model jaringan saraf tiruan dan seringkali memberikan hasil yang baik.
+- Mean squared error (MSE) dipilih sebagai fungsi loss karena ini adalah masalah regresi di mana kita mencoba untuk memprediksi nilai numerik.
 
-# Melatih model
-history = model.fit(X_train,y_train,batch_size=10,epochs=100,verbose=1,validation_split=0.2)
-```
+5. Pelatihan Model:
+- Model dilatih dengan data latih menggunakan method fit().
+- Batch size sebesar 10 dipilih, yang berarti data akan dibagi menjadi batch-batch dengan masing-masing batch berukuran 10 sampel. Ini membantu dalam proses optimasi yang lebih efisien.
+- Epochs sebesar 100 dipilih, yang berarti model akan melalui seluruh dataset latih sebanyak 100 kali.
+- Validation split sebesar 0.2 dipilih, yang berarti 20% data latih akan digunakan sebagai data validasi untuk mengukur kinerja model selama pelatihan.
+- Proses ini akan menghasilkan objek history yang berisi riwayat pelatihan model, termasuk metrik-metrik seperti loss dan akurasi pada setiap epoch.
 
 ## Evaluasi Model
 
-Model dievaluasi menggunakan R-squared untuk memeriksa seberapa baik model tersebut memprediksi harga mobil. Dari nilai R-squared sebesar 0.6525, kami menyimpulkan bahwa model kami mampu menjelaskan sekitar 65.25% variasi dalam data harga mobil.
-```
-y_pred = model.predict(X_test)
-from sklearn.metrics import r2_score
-r2_score(y_test,y_pred)
-```
+1. Memprediksi Harga Mobil: Model yang telah dilatih digunakan untuk memprediksi harga mobil menggunakan data uji (X_test).
 
-**Visualisasi Plot Loss Training**
-```
-plt.plot(history.history['loss'])
-plt.plot(history.history['val_loss'])
-```
+2. Menghitung Koefisien Determinasi (R-squared): Setelah memprediksi harga mobil menggunakan model, langkah selanjutnya adalah mengukur kinerja model dengan metrik evaluasi yang sesuai. Dalam hal ini, koefisien determinasi atau R-squared digunakan sebagai metrik evaluasi.
+
+- **Alasan Penggunaan R-squared:** R-squared adalah salah satu metrik evaluasi yang umum digunakan untuk masalah regresi. Ini memberikan informasi tentang seberapa baik variabel independen menjelaskan variasi dalam variabel dependen. Semakin tinggi nilai R-squared, semakin baik model dapat menjelaskan variasi dalam data. Oleh karena itu, R-squared digunakan untuk mengevaluasi seberapa baik model kita cocok dengan data aktual.
+
+![Nilai Koefisien Determinasi](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/6.JPG)
+
+R-squared memiliki nilai sebesar 0.8226. Ini mengindikasikan bahwa model mampu menjelaskan sekitar 82.26% dari variasi atau keragaman dalam data harga mobil yang diamati. Dengan kata lain, sekitar 82.26% dari perbedaan dalam harga mobil yang ada dalam dataset dapat dijelaskan oleh model yang telah dikembangkan. Semakin tinggi nilai R-squared, semakin baik model dalam menjelaskan variasi dalam data. Dengan demikian, nilai R-squared yang tinggi menunjukkan bahwa model memiliki kemampuan yang baik dalam memprediksi harga mobil berdasarkan fitur-fitur yang dipilih.
+
+- **Rumus R-squared:** R-squared dihitung sebagai koefisien determinasi yang merupakan proporsi variabilitas dalam variabel dependen yang dapat dijelaskan oleh variabel independen dalam model. Rumus matematisnya adalah sebagai berikut:
+
+![Rumus R-Squared](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/7.png)
+
+R-squared = 1 - (SS_res / SS_tot)
+
+di mana:
+SS_res adalah jumlah kuadrat residual (sum of squared residuals), yaitu jumlah kuadrat perbedaan antara nilai prediksi dan nilai aktual.
+SS_tot adalah jumlah kuadrat total (total sum of squares), yaitu jumlah kuadrat perbedaan antara setiap nilai aktual dan nilai rata-rata dari semua nilai aktual.
+
+R-squared memiliki rentang nilai dari 0 hingga 1, di mana:
+R-squared = 0 menunjukkan bahwa model tidak menjelaskan variasi sama sekali.
+R-squared = 1 menunjukkan bahwa model menjelaskan seluruh variasi dalam data dengan sempurna.
+
+- **Plot Loss Selama Pelatihan:** Grafik loss selama proses pelatihan digambarkan untuk memantau konvergensi model. Ini membantu dalam mengevaluasi apakah model telah mengalami overfitting atau underfitting, serta seberapa baik model beradaptasi dengan data pelatihan dan validasi.
+
 ![Plot Loss Training](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/2.png)
+
+3. Plot Nilai Aktual dan Nilai yang Diprediksi: Plot nilai aktual (y_test) dan nilai yang diprediksi (y_pred) digambarkan untuk memvisualisasikan seberapa baik model kita dalam memprediksi harga mobil. Ini memberikan pemahaman visual tentang seberapa dekat prediksi model dengan nilai aktual, serta apakah ada pola atau tren tertentu dalam prediksi yang perlu diperhatikan.
+Plot Loss Selama Pelatihan: Grafik loss selama proses pelatihan digambarkan untuk memantau konvergensi model. Ini membantu dalam mengevaluasi apakah model telah mengalami overfitting atau underfitting, serta seberapa baik model beradaptasi dengan data pelatihan dan validasi.
+
+4. Plot Nilai Aktual dan Nilai yang Diprediksi: Plot nilai aktual (y_test) dan nilai yang diprediksi (y_pred) digambarkan untuk memvisualisasikan seberapa baik model kita dalam memprediksi harga mobil. Ini memberikan pemahaman visual tentang seberapa dekat prediksi model dengan nilai aktual, serta apakah ada pola atau tren tertentu dalam prediksi yang perlu diperhatikan.
 
 ## Kesimpulan Prediksi
 **Gambar Plot Nilai Aktual vs Nilai Prediksi**
@@ -170,26 +197,74 @@ plt.plot(history.history['val_loss'])
 - Meskipun demikian, masih ada sekitar beberapa variasi dalam data yang tidak dapat dijelaskan oleh model.
 - Terdapat beberapa faktor lain di luar fitur yang digunakan dalam model yang mungkin juga mempengaruhi harga mobil seperti variabel lain yang tidak dipakai, dan dapat menjadi fokus penelitian lebih lanjut untuk meningkatkan kinerja model.
 
-**Kesimpulan Problem Statement**
-1. Pertanyaan 1: Variabel-variabel apa yang signifikan dalam memprediksi harga sebuah mobil?
-- carlength (Panjang Mobil): Variabel ini memiliki rentang nilai yang bervariasi cukup signifikan dari 141.1 hingga 208.1 dengan standar deviasi sekitar 12.34, menunjukkan variasi yang cukup besar dalam panjang mobil. Hal ini menandakan bahwa panjang mobil dapat menjadi faktor yang signifikan dalam menentukan harga mobil, karena ada variasi yang cukup besar antara mobil-mobil yang lebih pendek dan lebih panjang.
-- carwidth (Lebar Mobil): Variabel ini juga menunjukkan variasi yang cukup besar dari 60.3 hingga 72.3 dengan standar deviasi sekitar 2.15. Ini menunjukkan bahwa lebar mobil juga bisa menjadi faktor yang signifikan dalam menentukan harga mobil, karena ada variasi yang cukup besar antara mobil-mobil yang lebih sempit dan lebih lebar.
-- curbweight (Berat Kosong Mobil): Variabel ini memiliki rentang nilai yang cukup besar dari 1488 hingga 4066 dengan standar deviasi sekitar 520.68, menunjukkan variasi yang signifikan dalam berat kosong mobil. Hal ini menandakan bahwa berat kosong mobil dapat menjadi faktor penting dalam menentukan harga mobil, karena ada variasi yang cukup besar antara mobil-mobil yang lebih ringan dan lebih berat.
-- carheight (Tinggi Mobil): Meskipun tinggi mobil tidak menunjukkan variasi yang terlalu besar seperti variabel lainnya, tetapi masih ada variasi yang signifikan dari 47.8 hingga 59.8 dengan standar deviasi sekitar 2.44. Ini menandakan bahwa tinggi mobil juga dapat mempengaruhi harga mobil dalam skala yang lebih kecil, terutama jika ada variasi yang signifikan antara mobil-mobil dengan tinggi yang lebih rendah dan lebih tinggi.
-- highwaympg (Konsumsi Bahan Bakar di Jalan Raya): Variabel ini memiliki rentang nilai yang cukup besar dari 16 hingga 54 dengan standar deviasi sekitar 6.89, menunjukkan variasi yang cukup besar dalam konsumsi bahan bakar di jalan raya. Hal ini menandakan bahwa konsumsi bahan bakar di jalan raya dapat menjadi faktor penting dalam menentukan harga mobil, karena ada variasi yang cukup besar antara mobil-mobil dengan konsumsi bahan bakar yang lebih efisien dan kurang efisien.
+## **Menjawab Pertanyaan Problem Statement**
 
-2. Pertanyaan 2: Seberapa baik variabel-variabel tersebut menjelaskan harga sebuah mobil?
-Dari nilai koefisien determinasi (R-squared) sebesar 0.6525 yang diperoleh dari model yang telah dilatih, kita dapat membuat beberapa kesimpulan tentang kinerja model dengan memakai 5 variabel tersebut:
+### Pertanyaan 1: Variabel-variabel apa yang signifikan dalam memprediksi harga sebuah mobil?
 
-- Interpretasi Koefisien Determinasi (R-squared): Nilai R-squared berkisar antara 0 hingga 1. Semakin mendekati 1, semakin baik model dalam menjelaskan variasi dalam data. Nilai 0.6525 menunjukkan bahwa model kita dapat menjelaskan sekitar 65.25% variasi dalam data harga mobil.
-- Evaluasi Prediksi Model: Dengan menggunakan metrik R-squared, kita dapat melihat seberapa baik model kita cocok dengan data aktual. Nilai R-squared yang tinggi menunjukkan bahwa model kita memiliki kemampuan yang baik dalam memprediksi harga mobil.
+Variabel variabel dibawah dipilih karena nilai korelasi antara variabel tersebut dengan variabel dependent diatas 0.6, yang mana hal tersebut cukup tinggi untuk ukuran nilai independent. Bisa dilihat pada gambar berikut:
 
-## Cara Menjalankan Proyek
+![Korelasi Antar Kolom](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/1.png)
 
-1. Pastikan Anda memiliki lingkungan Python yang tersedia.
-2. Unduh semua file proyek dari repositori ini.
-3. Buka notebook Jupyter yang berisi kode proyek.
-4. Jalankan setiap sel kode dalam notebook secara berurutan untuk melatih model dan melakukan evaluasi.
+Alasan untuk memilih Variabel tersebut adalah sebagai berikut:
+
+1. carlength (Panjang Mobil):
+
+- Variabel ini memiliki korelasi positif sebesar 0.68 terhadap harga mobil.
+- Panjang mobil umumnya berkaitan dengan kelas atau tipe mobil tertentu yang mungkin memengaruhi harga mobil.
+
+2. carwidth (Lebar Mobil):
+
+- Variabel ini memiliki korelasi positif yang kuat sebesar 0.76 terhadap harga mobil.
+- Lebar mobil sering kali mempengaruhi ruang dalam mobil dan kestabilan saat berkendara, yang bisa menjadi indikator kelas atau kualitas mobil yang memengaruhi harga.
+
+3. curbweight (Berat Kosong Mobil):
+
+- Variabel ini memiliki korelasi positif yang cukup kuat sebesar 0.84 terhadap harga mobil.
+- Berat kosong mobil dapat mencerminkan bahan material dan teknologi yang digunakan dalam pembuatan mobil, yang umumnya berhubungan dengan kualitas dan kelas mobil.
+
+4. enginesize (Ukuran Mesin):
+
+- Variabel ini memiliki korelasi positif yang sangat kuat sebesar 0.87 terhadap harga mobil.
+- Ukuran mesin adalah faktor penting dalam menentukan performa dan daya tarik mobil, yang secara langsung memengaruhi harga.
+
+5. horsepower (Tenaga Kuda):
+
+- Variabel ini memiliki korelasi positif yang tinggi sebesar 0.81 terhadap harga mobil.
+- Tenaga kuda merupakan indikator langsung dari performa mesin mobil, yang juga mempengaruhi harga mobil.
+
+Dengan mempertimbangkan korelasi yang signifikan antara variabel-variabel ini dengan harga mobil, maka memilih lima variabel tersebut sebagai variabel model train adalah wajar dan dapat memberikan informasi yang berharga dalam memprediksi harga mobil.
+
+### Pertanyaan 2: Seberapa baik variabel-variabel tersebut menjelaskan harga sebuah mobil?
+
+Dari nilai koefisien determinasi (R-squared) sebesar 0.8226 yang diperoleh dari model yang telah dilatih, kita dapat membuat beberapa kesimpulan tentang kinerja model dengan memakai 5 variabel tersebut:
+
+![Nilai Koefisien Determinasi](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/6.JPG)
+
+- Interpretasi Koefisien Determinasi (R-squared):
+Nilai R-squared berkisar antara 0 hingga 1.
+Semakin mendekati 1, semakin baik model dalam menjelaskan variasi dalam data.
+Nilai 0.8226 menunjukkan bahwa model kita dapat menjelaskan sekitar 82.26% variasi dalam data harga mobil.
+
+- Evaluasi Prediksi Model:
+Dengan menggunakan metrik R-squared, kita dapat melihat seberapa baik model kita cocok dengan data aktual.
+Nilai R-squared yang tinggi menunjukkan bahwa model kita memiliki kemampuan yang baik dalam memprediksi harga mobil.
+
+## **Kesimpulan Umum**
+1. Interpretasi Koefisien Determinasi (R-squared):
+- Nilai R-squared berkisar antara 0 hingga 1.
+Semakin mendekati 1, semakin baik model dalam menjelaskan variasi dalam data.
+- Nilai 0.8226 menunjukkan bahwa model kita dapat menjelaskan sekitar 82.26% variasi dalam data harga mobil.
+
+2. Evaluasi Prediksi Model:
+- Dengan menggunakan metrik R-squared, kita dapat melihat seberapa baik model kita cocok dengan data aktual.
+- Nilai R-squared yang tinggi menunjukkan bahwa model kita memiliki kemampuan yang baik dalam memprediksi harga mobil.
+
+3. Kesimpulan Umum:
+- Model yang telah dilatih memiliki kinerja yang cukup baik dalam memprediksi harga mobil berdasarkan fitur-fitur yang dipilih.
+- Meskipun demikian, masih ada sekitar 17.74% variasi dalam data yang tidak dapat dijelaskan oleh model.
+- Terdapat beberapa faktor lain di luar fitur yang digunakan dalam model seperti variabel lain yang tidak dimasukkan ke dalam modelling yang mungkin juga mempengaruhi harga mobil, dan dapat menjadi fokus penelitian lebih lanjut untuk meningkatkan kinerja model.
+
+Dengan demikian, meskipun model dapat memberikan prediksi yang relatif baik, masih ada ruang untuk peningkatan dalam model untuk menjelaskan variasi yang lebih besar dalam data harga mobil.
 
 ## Referensi
 
