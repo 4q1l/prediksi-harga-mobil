@@ -2,44 +2,56 @@
 
 ## Domain Project
 
-Selama beberapa dekade terakhir, dengan munculnya Youtube, Amazon, Netflix, dan banyak layanan web serupa lainnya, sistem pemberi rekomendasi semakin banyak berperan dalam kehidupan kita. Dari e-commerce (menyarankan kepada pembeli artikel yang dapat menarik minat mereka) hingga iklan online (menyarankan kepada pengguna konten yang tepat, sesuai dengan preferensi mereka), sistem pemberi rekomendasi saat ini tidak dapat dihindari dalam perjalanan online kita sehari-hari.
-Secara umum, sistem pemberi rekomendasi adalah algoritme yang ditujukan untuk menyarankan item yang relevan kepada pengguna (item seperti film untuk ditonton, teks untuk dibaca, produk untuk dibeli, atau apa pun bergantung pada industri).
+Dalam era digital saat ini, sistem rekomendasi telah menjadi bagian integral dari pengalaman online kita. Mulai dari platform seperti Youtube, Amazon, Netflix, dan banyak lagi, sistem ini berperan penting dalam menyajikan konten atau produk yang sesuai dengan preferensi pengguna. Dalam konteks industri pemasaran dan perdagangan online, sistem rekomendasi buku menjadi relevan karena memiliki dampak besar terhadap pengalaman pengguna, retensi pelanggan, konversi penjualan, dan daya saing perusahaan.
 
-Sistem pemberi rekomendasi sangat penting di beberapa industri karena dapat menghasilkan pendapatan yang besar jika efisien atau juga menjadi cara untuk menonjol secara signifikan dari pesaing. Sebagai bukti pentingnya sistem pemberi rekomendasi, kami dapat menyebutkan bahwa, beberapa tahun yang lalu, Netflix menyelenggarakan sebuah tantangan (“hadiah Netflix”) yang tujuannya adalah untuk menghasilkan sistem pemberi rekomendasi yang berkinerja lebih baik daripada algoritmanya sendiri dengan sebuah hadiah. dari 1 juta dolar untuk menang.
+Keberhasilan sebuah platform e-commerce atau perpustakaan digital tidak hanya ditentukan oleh katalog produknya, tetapi juga oleh kemampuannya untuk menyajikan rekomendasi yang relevan kepada pengguna. Dalam konteks ini, proyek sistem rekomendasi buku menjadi penting karena:
 
-**Kenapa Proyek Ini Penting**
-- Peningkatan Pengalaman Pengguna: Dengan mampu menyajikan konten atau produk yang sesuai dengan preferensi individu, sistem pemberi rekomendasi meningkatkan pengalaman pengguna secara keseluruhan. Pengguna cenderung lebih puas ketika diberikan rekomendasi yang relevan dan menarik bagi mereka.
+Pertama, meningkatnya jumlah buku yang tersedia di pasar membuat konsumen sering kali kesulitan dalam menavigasi pilihan yang ada. Dengan adanya sistem rekomendasi yang efisien, pengguna dapat diberikan rekomendasi buku yang sesuai dengan preferensi mereka, membantu mereka menemukan konten yang relevan dan menarik.
 
-- Meningkatkan Retensi dan Konversi: Sistem pemberi rekomendasi yang efisien dapat membantu meningkatkan retensi pengguna dan mengubah pengguna menjadi pelanggan yang berulang. Dengan menyarankan produk atau konten yang tepat, peluang untuk pembelian atau interaksi lebih lanjut dengan platform meningkat.
+Kedua, sistem rekomendasi buku dapat membantu mengatasi masalah kelelahan keputusan yang sering dialami oleh pengguna. Dalam era di mana kita dibanjiri dengan informasi, memiliki sistem yang mampu menyaring dan menyarankan buku-buku yang sesuai dapat mengurangi beban pengambilan keputusan pengguna.
 
-- Peningkatan Pendapatan: Dalam industri seperti e-commerce dan periklanan online, sistem pemberi rekomendasi yang baik dapat membantu meningkatkan pendapatan dengan meningkatkan konversi penjualan dan tarif iklan. Hal ini dapat menghasilkan dampak finansial yang signifikan bagi perusahaan.
+Contoh konkret dari permasalahan yang dihadapi adalah ketika seorang pengguna ingin menemukan buku baru untuk dibaca tetapi terjebak dalam memilih dari berbagai opsi yang tersedia. Dalam hal ini, sistem rekomendasi buku dapat menganalisis preferensi sebelumnya, pola baca, dan perilaku pengguna lainnya untuk menyajikan rekomendasi yang relevan dan personal.
 
-- Daya Saing dan Inovasi: Perusahaan yang mampu mengoptimalkan sistem pemberi rekomendasi mereka dapat menonjol dari pesaing dan menciptakan keunggulan kompetitif. Ini dapat mendorong inovasi lebih lanjut dalam pengembangan algoritma dan strategi pemberian rekomendasi.
+Penerapan hasil proyek ini diharapkan dapat memberikan manfaat yang nyata kepada pengguna. Misalnya, dengan menggunakan algoritma machine learning yang canggih, sistem ini dapat memprediksi preferensi pengguna dengan lebih akurat dari waktu ke waktu, sehingga menyediakan rekomendasi yang semakin sesuai. Selain itu, integrasi dengan fitur ulasan dan rekomendasi dari pengguna lain dapat meningkatkan interaksi sosial di platform dan memperkaya pengalaman membaca.
+
+Dengan meningkatnya persaingan di pasar buku online, memiliki sistem rekomendasi buku yang efisien dan inovatif dapat menjadi keunggulan kompetitif bagi perusahaan. Ini tidak hanya memungkinkan perusahaan untuk mempertahankan pelanggan yang ada tetapi juga menarik pelanggan baru melalui pengalaman pengguna yang disesuaikan dan memuaskan.
 
 **Referensi**
-- Salah satu referensi utama adalah "The Netflix Prize" yang diselenggarakan oleh Netflix beberapa tahun yang lalu. Ini adalah contoh konkret dari bagaimana perusahaan melihat pentingnya sistem pemberi rekomendasi yang efisien dan dapat memberikan dorongan besar dalam mengembangkannya.
+[1] Koren, Y., Bell, R., & Volinsky, C. (2009). Matrix factorization techniques for recommender systems. Computer, 42(8), 30-37.
 
-- Referensi penelitian dan publikasi ilmiah dapat dilihat pada link berikut: [Deep Learning Based Recommender System: A Survey and New Perspectives](https://www.researchgate.net/publication/318671349_Deep_Learning_Based_Recommender_System_A_Survey_and_New_Perspectives)
+[2] Zhang, S., Yao, L., Sun, A., & Tay, Y. (2019). Deep learning based recommender system: A survey and new perspectives. ACM Computing Surveys (CSUR), 52(1), 1-38.
+
+[3] Netflix Prize. (n.d.). Diakses pada 26 Maret 2024, dari https://www.netflixprize.com/
 
 ## Business Understanding
 
-**Problem Statement**
+**Permasalahan**
 
-Bagaimana kita dapat meningkatkan pengalaman pengguna dan mengoptimalkan konversi penjualan dengan cara menyajikan rekomendasi yang relevan dan menarik?
+Bagaimana kita dapat meningkatkan pengalaman pembaca dengan menyajikan rekomendasi yang spesifik dan menarik?
 
-**Goals** 
+**Tujuan**
 
-Meningkatkan pengalaman pengguna dan mengoptimalkan konversi penjualan dengan cara menyajikan rekomendasi yang relevan dan menarik
+Meningkatkan kepuasan pembaca dengan menyediakan rekomendasi yang sesuai dengan preferensi pengguna.
 
-**Solution Statement**
+**Pernyataan Solusi**
 
-Penelitian ini menggunakan 2 algoritma machine learning sistem rekomendasi untuk menyelesaikan problem statement yaitu:
+Penelitian ini memanfaatkan dua algoritma machine learning untuk menangani permasalahan tersebut:
 
-1. Content-Based Filtering: Content-Based Filtering menggunakan informasi tentang item (konten atau produk) yang disukai oleh pengguna sebelumnya untuk merekomendasikan item yang serupa. Ini dilakukan dengan menganalisis fitur atau atribut dari setiap item dan membangun profil pengguna berdasarkan preferensi mereka.
+1. Content-Based Filtering: Menggunakan informasi tentang buku-buku yang disukai oleh pembaca sebelumnya untuk merekomendasikan buku yang serupa. Algoritma ini menganalisis fitur-fitur buku seperti genre, penulis, dan sinopsis untuk membangun profil preferensi pembaca.
 
-2. Collaborative Filtering: Collaborative Filtering memanfaatkan informasi tentang preferensi pengguna secara kolektif untuk membuat rekomendasi. Ini dilakukan dengan membandingkan perilaku atau preferensi pengguna yang serupa untuk menyarankan item yang disukai oleh pengguna tersebut.
+2. Collaborative Filtering: Memanfaatkan informasi rating dan ulasan buku dari pembaca lain untuk membuat rekomendasi. Dengan membandingkan preferensi pembaca yang serupa, algoritma ini menyajikan buku yang memiliki rating tertinggi atau yang paling sering disukai oleh pembaca dengan preferensi serupa.
 
-Algoritma Content Based Filtering digunakan untuk merekemondesikan buku berdasarkan aktivitas pengguna pada masa lalu, sedangkan algoritma Collabarative Filltering digunakan untuk merekomendasikan buku berdasarkan ratings yang paling tinggi.
+Kedua algoritma ini dirancang khusus untuk konteks rekomendasi buku, memungkinkan kami menyajikan rekomendasi yang lebih relevan dan menarik kepada pembaca.
+
+**Manfaat Bisnis dan Dampak Ekonomi**
+
+Penelitian ini memiliki potensi untuk memberikan dampak yang signifikan dalam dua bidang utama:
+
+- Kepuasan Pembaca dan Retensi Pelanggan: Dengan menyediakan rekomendasi buku yang sesuai dengan preferensi pembaca, kami dapat meningkatkan pengalaman membaca dan kepuasan pelanggan. Pembaca akan merasa lebih terhubung dengan platform kami karena mereka mendapatkan rekomendasi yang relevan, yang kemudian dapat meningkatkan retensi pelanggan.
+
+- Peningkatan Penjualan Buku: Dengan menggunakan algoritma rekomendasi yang canggih, kami dapat meningkatkan konversi penjualan buku. Rekomendasi yang akurat dan menarik dapat mendorong pembaca untuk mengeksplorasi buku-buku baru dan membuat pembelian tambahan. Hal ini berpotensi meningkatkan pendapatan dari penjualan buku dan memperkuat posisi kami di pasar.
+
+Stakeholder utama dari penelitian ini meliputi penerbit buku, platform e-commerce buku, dan pembaca. Penerapan hasil penelitian ini secara aplikatif akan melibatkan integrasi algoritma rekomendasi ke dalam platform e-commerce buku yang ada, sehingga pembaca dapat langsung mengakses rekomendasi saat mereka menjelajahi katalog buku. Ini akan memungkinkan pengalaman berbelanja yang lebih personal dan menarik bagi pembaca, sambil membantu penerbit dan platform e-commerce meningkatkan penjualan buku mereka.
 
 ## Data Understanding
 
@@ -104,49 +116,60 @@ Untuk tahapan yang dilakukan pada Data Understanding adalah sebagai berikut:
 
 ## Data Preparation
 
-**Tahapan Data Preparation**
 ### Content-Based Filtering
-- Dilakukan penggabungan data peringkat dengan data buku dan data pengguna berdasarkan ISBN dan User-ID.
-    - Ini dilakukan agar informasi tentang peringkat, buku, dan pengguna dapat digunakan secara bersamaan dalam analisis.
-- Dilakukan pengolahan data untuk mengatasi nilai yang hilang.
-    - Nilai yang hilang diidentifikasi dan dihapus dari dataset agar tidak mengganggu analisis.
-- Dilakukan pembuangan duplikat dan pengambilan data unik berdasarkan ISBN.
-    - Duplikat berdasarkan ISBN dihapus untuk memastikan setiap buku hanya muncul sekali dalam analisis.
-- Dilakukan vektorisasi teks menggunakan TF-IDF untuk deskripsi buku.
-    - Deskripsi buku dalam bentuk teks diubah menjadi representasi numerik yang dapat digunakan untuk mengukur kesamaan antar-buku.
-- Dihasilkan matriks cosine similarity untuk menemukan kesamaan antar-buku.
-    - Matriks cosine similarity digunakan untuk menghitung seberapa mirip satu buku dengan yang lain berdasarkan vektor TF-IDF dari deskripsi buku.
+1. Penanganan Nilai yang Hilang
+
+- Missing value adalah nilai yang tidak ada dalam dataset. Untuk mengatasi hal ini, kami melakukan identifikasi nilai yang hilang dalam dataset dan menghapusnya agar tidak mengganggu analisis selanjutnya.
+
+2. Penghapusan Duplikat dan Pengambilan Data Unik
+
+- Duplikat berdasarkan ISBN dihapus untuk memastikan setiap buku hanya muncul sekali dalam analisis. Ini dilakukan agar hasil analisis tidak terpengaruh oleh adanya duplikat data.
+
+3. Vektorisasi Teks menggunakan TF-IDF
+
+- Vektorisasi teks adalah proses mengubah teks menjadi representasi numerik yang dapat digunakan untuk analisis. Kami menggunakan metode TF-IDF (Term Frequency-Inverse Document Frequency) untuk mengubah deskripsi buku menjadi vektor numerik. Ini memungkinkan kami untuk mengukur kesamaan antar-buku berdasarkan konten teks mereka.
+
+4. Membuat Matriks Cosine Similarity
+
+- Matriks cosine similarity digunakan untuk mengukur seberapa mirip satu buku dengan yang lain berdasarkan vektor TF-IDF dari deskripsi buku. Ini dilakukan dengan menghitung kosinus dari sudut antara vektor TF-IDF dari setiap pasangan buku. Semakin tinggi nilai cosine similarity antara dua buku, semakin mirip konten teksnya.
+
 
 ### Collaborative Filtering
-- Dilakukan encoding untuk User-ID dan ISBN.
-    - User-ID dan ISBN diubah menjadi nilai indeks yang dapat digunakan oleh model untuk pemodelan.
-- Dilakukan normalisasi peringkat.
-    - Peringkat buku dinormalisasi untuk memastikan perbandingan yang konsisten antara nilai peringkat.
-- Dilakukan pemisahan data untuk pelatihan dan validasi.
-    - Data dibagi menjadi dua subset: data pelatihan dan data validasi, yang digunakan untuk melatih dan menguji model Collaborative Filtering.
+1. Encoding User-ID dan ISBN
+
+- User-ID dan ISBN diubah menjadi nilai indeks yang dapat digunakan oleh model untuk pemodelan. Ini dilakukan untuk mengubah fitur kategorikal menjadi bentuk numerik yang dapat diproses oleh algoritma machine learning.
+
+2. Normalisasi Peringkat
+
+- Normalisasi peringkat buku dilakukan untuk memastikan perbandingan yang konsisten antara nilai peringkat. Ini membantu dalam membandingkan preferensi pengguna secara akurat tanpa adanya bias pada rentang nilai peringkat.
+
+3. Pemisahan Data untuk Pelatihan dan Validasi
+
+- Data dibagi menjadi dua subset: data pelatihan dan data validasi. Data pelatihan digunakan untuk melatih model Collaborative Filtering, sedangkan data validasi digunakan untuk menguji kinerja model. Pemisahan ini penting untuk mengevaluasi seberapa baik model dapat membuat rekomendasi buku yang akurat dan relevan.
 
 ## Modelling and Result
 
 **Modelling Step**
 ### Content-Based Filtering
 - **Modelling:**
-    - Digunakan metode Content-Based Filtering dengan menggunakan matriks cosine similarity dari deskripsi buku.
-    - Fungsi rekomendasi buku dibuat untuk memberikan rekomendasi berdasarkan kesamaan antara deskripsi buku yang ada dalam dataset.
-    - Menggunakan fungsi `book_recommendations(book_title)` untuk mendapatkan rekomendasi buku berdasarkan judul buku yang dipilih.
+    - Metode Content-Based Filtering dipilih karena fokus pada kesamaan antara fitur-fitur buku berdasarkan deskripsi mereka.
+    - Matriks cosine similarity digunakan untuk mengukur kesamaan antara deskripsi buku dalam dataset.
+    - Fungsi rekomendasi buku dibuat untuk memberikan rekomendasi berdasarkan kesamaan deskripsi buku.
+    - Matriks cosine similarity digunakan untuk menghasilkan rekomendasi buku yang sesuai dengan preferensi pengguna berdasarkan judul buku yang dipilih.
 
 **Result:**
-    - Contoh hasil rekomendasi buku berdasarkan judul buku yang dipilih bisa dilihat pada gambar 1
+    - Hasil rekomendasi buku berdasarkan judul buku yang dipilih dapat dilihat pada Gambar 1
 ![Hasil Content-Based Filtering](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/10.JPG)
 
 Gambar 1. Hasil rekomendasi buku Content-Based Filtering
 
-    - Anda dapat menggunakan fungsi `book_recommendations(book_title)` untuk mendapatkan rekomendasi buku berdasarkan judul buku yang dipilih.
+Fungsi `book_recommendations(book_title)` digunakan untuk mendapatkan rekomendasi buku berdasarkan judul buku yang dipilih.
 
 ### Collaborative Filtering
 - **Modelling:**
-    - Metode Collaborative Filtering digunakan dengan membangun model neural network menggunakan TensorFlow.
-    - Model ini memanfaatkan embedding layers untuk merepresentasikan pengguna dan buku dalam ruang laten.
-    - Menggunakan fungsi `get_book_recommendations(user_id, model, books_df)` untuk mendapatkan rekomendasi buku untuk pengguna tertentu.
+    - Metode Collaborative Filtering digunakan karena model ini mampu mempelajari preferensi pengguna secara kolektif dan memberikan rekomendasi berdasarkan kesamaan preferensi pengguna.
+    - Model neural network dibangun menggunakan TensorFlow dengan menggunakan embedding layers untuk merepresentasikan pengguna dan buku dalam ruang laten.
+    - Fungsi get_book_recommendations(user_id, model, books_df) digunakan untuk mendapatkan rekomendasi buku untuk pengguna tertentu.
 
 **Result:**
     - Hasil evaluasi model dan contoh rekomendasi buku untuk seorang pengguna dapat dilihat pada gambar 2
@@ -154,7 +177,26 @@ Gambar 1. Hasil rekomendasi buku Content-Based Filtering
 
 Gambar 2. Hasil rekomendasi Collaborative Filtering
 
-    - Menggunakan fungsi `get_book_recommendations(user_id, model, books_df)` untuk mendapatkan rekomendasi buku untuk pengguna tertentu. 
+Menggunakan fungsi `get_book_recommendations(user_id, model, books_df)` untuk mendapatkan rekomendasi buku untuk pengguna tertentu. 
+
+**Top-N Recommendation**
+Top 10 Book Recommendations bisa dilihat pada tabel 5
+
+Tabel 5. Top 10 Book Recommendations for User 276725
+
+| No. | Book Title                                             | ISBN         |
+|-----|--------------------------------------------------------|--------------|
+| 1   | Die Zwei Turme II                                     | 3608935428   |
+| 2   | The Girl Who Loved Tom Gordon : A Novel                | 0684867621   |
+| 3   | The Watsons Go to Birmingham - 1963 (Yearling Newbery) | 0440414121   |
+| 4   | Die Wiederkehr Des Konigs III                          | 3608935436   |
+| 5   | Title Kassandra. ErzÃ?Â¤hlung. ( Sammlung Luchterhand im dtv) | 3423118709   |
+| 6   | Parque JurÃ¡sico                                      | 840149236X   |
+| 7   | Agu Trot [spanish edition]                             | 8420444367   |
+| 8   | Unknown Title                                          | 0099414732   |
+| 9   | Momo (Spanish Language Edition)                        | 8420432113   |
+| 10  | The Music of Chance                                   | 0140154078   |
+
 
 ## Evaluasi Model
 
@@ -171,12 +213,27 @@ Evaluasi metrik yang digunakan untuk mengukur kinerja model adalah metrik RMSE (
 
 ![formula matriks RMSE](https://raw.githubusercontent.com/onedayxzn/submission_file/master/rumusRMSE.png)
 
+RMSE = sqrt((Σ(At_i - ft_i)^2) / N)
+
 keterangan : <br>
 At : Nilai Aktual. <br>
 ft = Nilai hasil peramalan.<br>
 N = banyaknya dataset<br>
 
-hasil dari model evaluasi visualisasi matriks adalah sebagai berikut :  
-![hasil Evaluasi](https://github.com/4q1l/prediksi-harga-mobil/blob/main/8.png)
+Hasil dari model evaluasi visualisasi matriks adalah sebagai berikut :  
+![Hasil Evaluasi](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/8.png)
 
-dari visualisasi proses training model di atas cukup smooth dan model konvergen pada epochs sekitar 100. Dari proses ini, diperoleh nilai error akhir sebesar sekitar 0.2677 dan error pada data validasi sebesar 0.2683.
+**Hasil Evaluasi**
+
+Dari visualisasi proses training model di atas, terlihat bahwa proses training berjalan dengan lancar dan model konvergen pada epochs sekitar 100. Nilai RMSE akhir yang diperoleh adalah sekitar 0.2677 untuk data training dan 0.2683 untuk data validasi.
+
+**Interpretasi**
+
+Dalam konteks proyek ini, tujuan utama adalah meningkatkan pengalaman pengguna dengan menyajikan rekomendasi yang relevan dan menarik. Dengan nilai RMSE yang rendah, menunjukkan bahwa model memiliki tingkat kesalahan prediksi yang rendah. Oleh karena itu, dapat disimpulkan bahwa model berhasil dalam memberikan rekomendasi buku yang akurat dan relevan, sesuai dengan goals dan solusi yang diinginkan dari proyek ini.
+
+Hasil evaluasi yang memuaskan ini menunjukkan bahwa proyek ini berhasil dalam menyelesaikan permasalahan yang diangkat, yaitu meningkatkan pengalaman pengguna melalui rekomendasi buku. Model yang dihasilkan mampu memberikan rekomendasi yang tepat dan sesuai dengan preferensi pengguna, sehingga mencapai tujuan proyek secara efektif.
+
+
+
+
+
