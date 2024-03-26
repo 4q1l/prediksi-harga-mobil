@@ -228,7 +228,7 @@ Evaluasi metrik yang digunakan untuk mengukur kinerja model adalah metrik RMSE (
 ![formula matriks RMSE](https://raw.githubusercontent.com/onedayxzn/submission_file/master/rumusRMSE.png)
 
 \begin{equation}
-\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2}
+\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
 \end{equation}
 
 keterangan : <br>
