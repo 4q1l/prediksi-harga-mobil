@@ -1,6 +1,6 @@
 # Proyek System Rekomendasi Buku
 
-## Domain Project
+## Project Overview
 
 Dalam era digital saat ini, sistem rekomendasi telah menjadi bagian integral dari pengalaman online kita. Mulai dari platform seperti Youtube, Amazon, Netflix, dan banyak lagi, sistem ini berperan penting dalam menyajikan konten atau produk yang sesuai dengan preferensi pengguna. Dalam konteks industri pemasaran dan perdagangan online, sistem rekomendasi buku menjadi relevan karena memiliki dampak besar terhadap pengalaman pengguna, retensi pelanggan, konversi penjualan, dan daya saing perusahaan.
 
@@ -157,10 +157,6 @@ Untuk tahapan yang dilakukan pada Data Understanding adalah sebagai berikut:
     - Fungsi rekomendasi buku dibuat untuk memberikan rekomendasi berdasarkan kesamaan deskripsi buku.
     - Matriks cosine similarity digunakan untuk menghasilkan rekomendasi buku yang sesuai dengan preferensi pengguna berdasarkan judul buku yang dipilih.
 
-**Result:**
-    - Hasil rekomendasi buku berdasarkan judul buku yang dipilih dapat dilihat pada Gambar 1
-![Hasil Content-Based Filtering](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/10.JPG)
-
 **Top-N Recommendation**
 Rekomendasi Berdasarkan judul bisa dilihat pada tabel 5
 
@@ -184,14 +180,6 @@ Fungsi `book_recommendations(book_title)` digunakan untuk mendapatkan rekomendas
     - Metode Collaborative Filtering digunakan karena model ini mampu mempelajari preferensi pengguna secara kolektif dan memberikan rekomendasi berdasarkan kesamaan preferensi pengguna.
     - Model neural network dibangun menggunakan TensorFlow dengan menggunakan embedding layers untuk merepresentasikan pengguna dan buku dalam ruang laten.
     - Fungsi get_book_recommendations(user_id, model, books_df) digunakan untuk mendapatkan rekomendasi buku untuk pengguna tertentu.
-
-**Result:**
-    - Hasil evaluasi model dan contoh rekomendasi buku untuk seorang pengguna dapat dilihat pada gambar 2
-![Hasil Collaborative Filtering](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/9.JPG)
-
-Gambar 2. Hasil rekomendasi Collaborative Filtering
-
-Menggunakan fungsi `get_book_recommendations(user_id, model, books_df)` untuk mendapatkan rekomendasi buku untuk pengguna tertentu. 
 
 **Top-N Recommendation**
 Top 10 Book Recommendations bisa dilihat pada tabel 6
@@ -223,9 +211,7 @@ Evaluasi metrik yang digunakan untuk mengukur kinerja model adalah metrik RMSE (
   **kelebihan** : menghukum kesalahan besar lebih sehingga bisa lebih tepat dalam beberapa kasus.  
   **Kekurangan** : memberikan bobot yang relatif tinggi untuk kesalahan besar. Ini berarti RMSE harus lebih berguna ketika kesalahan besar sangat tidak diinginkan
 
-- formula dari matriks RMSE adalah sebagai berikut
-
-![formula matriks RMSE](https://raw.githubusercontent.com/onedayxzn/submission_file/master/rumusRMSE.png)
+- Formula dari matriks RMSE adalah sebagai berikut
 
 $$
 \begin{aligned}
@@ -238,8 +224,11 @@ At : Nilai Aktual. <br>
 ft = Nilai hasil peramalan.<br>
 N = banyaknya dataset<br>
 
-Hasil dari model evaluasi visualisasi matriks adalah sebagai berikut :  
+Hasil dari model evaluasi visualisasi matriks dapat dilihat pada gambar 1  
+
 ![Hasil Evaluasi](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/8.png)
+
+Gambar 1. Hasil dari model evaluasi visualisasi matriks
 
 **Hasil Evaluasi**
 
