@@ -161,6 +161,20 @@ Untuk tahapan yang dilakukan pada Data Understanding adalah sebagai berikut:
     - Hasil rekomendasi buku berdasarkan judul buku yang dipilih dapat dilihat pada Gambar 1
 ![Hasil Content-Based Filtering](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/10.JPG)
 
+**Top-N Recommendation**
+Rekomendasi Berdasarkan judul bisa dilihat pada tabel 5
+
+Tabel 5. Rekomendasi Berdasarkan judul The Kitchen God's Wife
+
+| No. | Judul Buku                                    |
+|-----|-----------------------------------------------|
+| 1   | Decision in Normandy                          |
+| 2   | Nights Below Station Street                   |
+| 3   | The Middle Stories                            |
+| 4   | Goodbye to the Buttermilk Sky                |
+| 5   | New Vegetarian: Bold and Beautiful Recipes for Every Occasion |
+
+
 Gambar 1. Hasil rekomendasi buku Content-Based Filtering
 
 Fungsi `book_recommendations(book_title)` digunakan untuk mendapatkan rekomendasi buku berdasarkan judul buku yang dipilih.
@@ -180,9 +194,9 @@ Gambar 2. Hasil rekomendasi Collaborative Filtering
 Menggunakan fungsi `get_book_recommendations(user_id, model, books_df)` untuk mendapatkan rekomendasi buku untuk pengguna tertentu. 
 
 **Top-N Recommendation**
-Top 10 Book Recommendations bisa dilihat pada tabel 5
+Top 10 Book Recommendations bisa dilihat pada tabel 6
 
-Tabel 5. Top 10 Book Recommendations for User 276725
+Tabel 6. Top 10 Book Recommendations for User 276725
 
 | No. | Book Title                                             | ISBN         |
 |-----|--------------------------------------------------------|--------------|
@@ -213,7 +227,9 @@ Evaluasi metrik yang digunakan untuk mengukur kinerja model adalah metrik RMSE (
 
 ![formula matriks RMSE](https://raw.githubusercontent.com/onedayxzn/submission_file/master/rumusRMSE.png)
 
-RMSE = sqrt((Σ(At_i - ft_i)^2) / N)
+\begin{equation}
+\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2}
+\end{equation}
 
 keterangan : <br>
 At : Nilai Aktual. <br>
