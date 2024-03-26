@@ -34,15 +34,15 @@ Penelitian ini memanfaatkan dua algoritma machine learning untuk menangani perma
 
 2. Collaborative Filtering: Memanfaatkan informasi rating dan ulasan buku dari pembaca lain untuk membuat rekomendasi. Dengan membandingkan preferensi pembaca yang serupa, algoritma ini menyajikan buku yang memiliki rating tertinggi atau yang paling sering disukai oleh pembaca dengan preferensi serupa.
 
-Kedua algoritma ini dirancang khusus untuk konteks rekomendasi buku, memungkinkan kami menyajikan rekomendasi yang lebih relevan dan menarik kepada pembaca.
+Kedua algoritma ini dirancang khusus untuk konteks rekomendasi buku, memungkinkan rekomendasi disajikan lebih relevan dan menarik kepada pembaca.
 
 **Manfaat Bisnis dan Dampak Ekonomi**
 
 Penelitian ini memiliki potensi untuk memberikan dampak yang signifikan dalam dua bidang utama:
 
-- Kepuasan Pembaca dan Retensi Pelanggan: Dengan menyediakan rekomendasi buku yang sesuai dengan preferensi pembaca, kami dapat meningkatkan pengalaman membaca dan kepuasan pelanggan. Pembaca akan merasa lebih terhubung dengan platform kami karena mereka mendapatkan rekomendasi yang relevan, yang kemudian dapat meningkatkan retensi pelanggan.
+- Kepuasan Pembaca dan Retensi Pelanggan: Dengan menyediakan rekomendasi buku yang sesuai dengan preferensi pembaca, dapat meningkatkan pengalaman membaca dan kepuasan pelanggan. Pembaca akan merasa lebih terhubung dengan platform karena mereka mendapatkan rekomendasi yang relevan, yang kemudian dapat meningkatkan retensi pelanggan.
 
-- Peningkatan Penjualan Buku: Dengan menggunakan algoritma rekomendasi yang canggih, kami dapat meningkatkan konversi penjualan buku. Rekomendasi yang akurat dan menarik dapat mendorong pembaca untuk mengeksplorasi buku-buku baru dan membuat pembelian tambahan. Hal ini berpotensi meningkatkan pendapatan dari penjualan buku dan memperkuat posisi kami di pasar.
+- Peningkatan Penjualan Buku: Dengan menggunakan algoritma rekomendasi yang canggih, dapat meningkatkan konversi penjualan buku. Rekomendasi yang akurat dan menarik dapat mendorong pembaca untuk mengeksplorasi buku-buku baru dan membuat pembelian tambahan. Hal ini berpotensi meningkatkan pendapatan dari penjualan buku dan memperkuat posisi di pasar.
 
 Stakeholder utama dari penelitian ini meliputi penerbit buku, platform e-commerce buku, dan pembaca. Penerapan hasil penelitian ini secara aplikatif akan melibatkan integrasi algoritma rekomendasi ke dalam platform e-commerce buku yang ada, sehingga pembaca dapat langsung mengakses rekomendasi saat mereka menjelajahi katalog buku. Ini akan memungkinkan pengalaman berbelanja yang lebih personal dan menarik bagi pembaca, sambil membantu penerbit dan platform e-commerce meningkatkan penjualan buku mereka.
 
@@ -112,7 +112,7 @@ Untuk tahapan yang dilakukan pada Data Understanding adalah sebagai berikut:
 ### Content-Based Filtering
 1. Penanganan Nilai yang Hilang
 
-- Missing value adalah nilai yang tidak ada dalam dataset. Untuk mengatasi hal ini, kami melakukan identifikasi nilai yang hilang dalam dataset dan menghapusnya agar tidak mengganggu analisis selanjutnya.
+- Missing value adalah nilai yang tidak ada dalam dataset. Untuk mengatasi hal ini, dilakukan identifikasi nilai yang hilang dalam dataset dan menghapusnya agar tidak mengganggu analisis selanjutnya.
 
 2. Penghapusan Duplikat dan Pengambilan Data Unik
 
@@ -120,7 +120,7 @@ Untuk tahapan yang dilakukan pada Data Understanding adalah sebagai berikut:
 
 3. Vektorisasi Teks menggunakan TF-IDF
 
-- Vektorisasi teks adalah proses mengubah teks menjadi representasi numerik yang dapat digunakan untuk analisis. Kami menggunakan metode TF-IDF (Term Frequency-Inverse Document Frequency) untuk mengubah deskripsi buku menjadi vektor numerik. Ini memungkinkan kami untuk mengukur kesamaan antar-buku berdasarkan konten teks mereka.
+- Vektorisasi teks adalah proses mengubah teks menjadi representasi numerik yang dapat digunakan untuk analisis. Digunakan metode TF-IDF (Term Frequency-Inverse Document Frequency) untuk mengubah deskripsi buku menjadi vektor numerik. Ini memungkinkan pengkuran kesamaan antar-buku berdasarkan konten teks mereka.
 
 4. Membuat Matriks Cosine Similarity
 
