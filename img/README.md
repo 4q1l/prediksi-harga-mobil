@@ -2,13 +2,13 @@
 
 ## Project Overview
 
-Dalam era digital saat ini, sistem rekomendasi telah menjadi bagian integral dari pengalaman online kita. Mulai dari platform seperti Youtube, Amazon, Netflix, dan banyak lagi, sistem ini berperan penting dalam menyajikan konten atau produk yang sesuai dengan preferensi pengguna. Dalam konteks industri pemasaran dan perdagangan online, sistem rekomendasi buku menjadi relevan karena memiliki dampak besar terhadap pengalaman pengguna, retensi pelanggan, konversi penjualan, dan daya saing perusahaan.
+Dalam era digital saat ini, sistem rekomendasi telah menjadi bagian integral dari pengalaman online. Mulai dari platform seperti Youtube, Amazon, Netflix, dan banyak lagi, sistem ini berperan penting dalam menyajikan konten atau produk yang sesuai dengan preferensi pengguna. Dalam konteks industri pemasaran dan perdagangan online, sistem rekomendasi buku menjadi relevan karena memiliki dampak besar terhadap pengalaman pengguna, retensi pelanggan, konversi penjualan, dan daya saing perusahaan.
 
-Keberhasilan sebuah platform e-commerce atau perpustakaan digital tidak hanya ditentukan oleh katalog produknya, tetapi juga oleh kemampuannya untuk menyajikan rekomendasi yang relevan kepada pengguna. Dalam konteks ini, proyek sistem rekomendasi buku menjadi penting karena:
+Keberhasilan sebuah platform e-commerce atau perpustakaan digital tidak hanya ditentukan oleh katalog produknya, tetapi juga oleh kemampuannya untuk menyajikan rekomendasi yang relevan kepada pengguna[1]. Dalam konteks ini, proyek sistem rekomendasi buku menjadi penting karena:
 
 Pertama, meningkatnya jumlah buku yang tersedia di pasar membuat konsumen sering kali kesulitan dalam menavigasi pilihan yang ada. Dengan adanya sistem rekomendasi yang efisien, pengguna dapat diberikan rekomendasi buku yang sesuai dengan preferensi mereka, membantu mereka menemukan konten yang relevan dan menarik.
 
-Kedua, sistem rekomendasi buku dapat membantu mengatasi masalah kelelahan keputusan yang sering dialami oleh pengguna. Dalam era di mana kita dibanjiri dengan informasi, memiliki sistem yang mampu menyaring dan menyarankan buku-buku yang sesuai dapat mengurangi beban pengambilan keputusan pengguna.
+Kedua, sistem rekomendasi buku dapat membantu mengatasi masalah kelelahan keputusan yang sering dialami oleh pengguna. Dalam era di mana dibanjiri dengan informasi, memiliki sistem yang mampu menyaring dan menyarankan buku-buku yang sesuai dapat mengurangi beban pengambilan keputusan pengguna[2].
 
 Contoh konkret dari permasalahan yang dihadapi adalah ketika seorang pengguna ingin menemukan buku baru untuk dibaca tetapi terjebak dalam memilih dari berbagai opsi yang tersedia. Dalam hal ini, sistem rekomendasi buku dapat menganalisis preferensi sebelumnya, pola baca, dan perilaku pengguna lainnya untuk menyajikan rekomendasi yang relevan dan personal.
 
@@ -16,19 +16,11 @@ Penerapan hasil proyek ini diharapkan dapat memberikan manfaat yang nyata kepada
 
 Dengan meningkatnya persaingan di pasar buku online, memiliki sistem rekomendasi buku yang efisien dan inovatif dapat menjadi keunggulan kompetitif bagi perusahaan. Ini tidak hanya memungkinkan perusahaan untuk mempertahankan pelanggan yang ada tetapi juga menarik pelanggan baru melalui pengalaman pengguna yang disesuaikan dan memuaskan.
 
-**Referensi**
-
-[1] Y. Koren, R. Bell, dan C. Volinsky, "Matrix factorization techniques for recommender systems," Computer, vol. 42, no. 8, hal. 30-37, 2009.
-
-[2] S. Zhang, L. Yao, A. Sun, dan Y. Tay, "Deep learning based recommender system: A survey and new perspectives," ACM Computing Surveys (CSUR), vol. 52, no. 1, hal. 1-38, 2019.
-
-[3] Netflix Prize, "Diakses pada 26 Maret 2024," [Online]. Tersedia: https://www.netflixprize.com/.
-
 ## Business Understanding
 
 **Permasalahan**
 
-Bagaimana kita dapat meningkatkan pengalaman pembaca dengan menyajikan rekomendasi yang spesifik dan menarik?
+Bagaimana cara meningkatkan pengalaman pembaca dengan menyajikan rekomendasi yang spesifik dan menarik?
 
 **Tujuan**
 
@@ -242,7 +234,13 @@ Dalam konteks proyek ini, tujuan utama adalah meningkatkan pengalaman pengguna d
 
 Hasil evaluasi yang memuaskan ini menunjukkan bahwa proyek ini berhasil dalam menyelesaikan permasalahan yang diangkat, yaitu meningkatkan pengalaman pengguna melalui rekomendasi buku. Model yang dihasilkan mampu memberikan rekomendasi yang tepat dan sesuai dengan preferensi pengguna, sehingga mencapai tujuan proyek secara efektif.
 
+## Referensi
 
+[1] Y. Koren, R. Bell, dan C. Volinsky, "Matrix factorization techniques for recommender systems," Computer, vol. 42, no. 8, hal. 30-37, 2009.
+
+[2] S. Zhang, L. Yao, A. Sun, dan Y. Tay, "Deep learning based recommender system: A survey and new perspectives," ACM Computing Surveys (CSUR), vol. 52, no. 1, hal. 1-38, 2019.
+
+[3] Netflix Prize, "Diakses pada 26 Maret 2024," [Online]. Tersedia: https://www.netflixprize.com/.
 
 
 
