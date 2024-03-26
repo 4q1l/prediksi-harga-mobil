@@ -17,11 +17,12 @@ Penerapan hasil proyek ini diharapkan dapat memberikan manfaat yang nyata kepada
 Dengan meningkatnya persaingan di pasar buku online, memiliki sistem rekomendasi buku yang efisien dan inovatif dapat menjadi keunggulan kompetitif bagi perusahaan. Ini tidak hanya memungkinkan perusahaan untuk mempertahankan pelanggan yang ada tetapi juga menarik pelanggan baru melalui pengalaman pengguna yang disesuaikan dan memuaskan.
 
 **Referensi**
-[1] Koren, Y., Bell, R., & Volinsky, C. (2009). Matrix factorization techniques for recommender systems. Computer, 42(8), 30-37.
 
-[2] Zhang, S., Yao, L., Sun, A., & Tay, Y. (2019). Deep learning based recommender system: A survey and new perspectives. ACM Computing Surveys (CSUR), 52(1), 1-38.
+[1] Y. Koren, R. Bell, dan C. Volinsky, "Matrix factorization techniques for recommender systems," Computer, vol. 42, no. 8, hal. 30-37, 2009.
 
-[3] Netflix Prize. (n.d.). Diakses pada 26 Maret 2024, dari https://www.netflixprize.com/
+[2] S. Zhang, L. Yao, A. Sun, dan Y. Tay, "Deep learning based recommender system: A survey and new perspectives," ACM Computing Surveys (CSUR), vol. 52, no. 1, hal. 1-38, 2019.
+
+[3] Netflix Prize, "Diakses pada 26 Maret 2024," [Online]. Tersedia: https://www.netflixprize.com/.
 
 ## Business Understanding
 
