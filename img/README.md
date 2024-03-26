@@ -226,11 +226,6 @@ Keterangan:
 - $\( \hat{A}_i \)$ adalah nilai hasil peramalan.
 - $\( N \)$ adalah banyaknya dataset.
 
-keterangan : <br>
-At : Nilai Aktual. <br>
-ft = Nilai hasil peramalan.<br>
-N = banyaknya dataset<br>
-
 Hasil dari model evaluasi visualisasi matriks dapat dilihat pada gambar 1  
 
 ![Hasil Evaluasi](https://raw.githubusercontent.com/4q1l/prediksi-harga-mobil/main/img/8.png)
