@@ -215,9 +215,15 @@ Evaluasi metrik yang digunakan untuk mengukur kinerja model adalah metrik RMSE (
 
 $$
 \begin{aligned}
-\text{RMSE} &= \sqrt{\frac{1}{n} \sum_{i=1}^{n} (Y\_i - \hat{Y}\_i)^2}
+\text{RMSE} &= \sqrt{\frac{1}{N} \sum_{i=1}^{N} (A_i - \hat{A}_i)^2}
 \end{aligned}
 $$
+
+Keterangan:
+
+- $\( A_i \)$ adalah nilai aktual.
+- $\( \hat{A}_i \)$ adalah nilai hasil peramalan.
+- $\( N \)$ adalah banyaknya dataset.
 
 keterangan : <br>
 At : Nilai Aktual. <br>
